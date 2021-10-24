@@ -16,7 +16,7 @@ $Dark-blue: hsl(223, 47%, 23%);
 
 body{
     font-size: 16px;
-    background: url("../assets/pattern-background-desktop.svg") no-repeat;
+    background: url("../assets/pattern-background-desktop.svg") no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +41,7 @@ body{
         margin: 1.5rem 0;
         font-size: 1rem;
         font-weight: 500;
+        line-height: 1.6;
         color: $Desaturated-blue;
     }
 }
@@ -80,6 +81,7 @@ button{
     width: 100%;
     font-weight: 700;
     font-size: 1rem;
+    cursor: pointer;
 }
 .proceed{
     background: $Bright-blue;
@@ -102,6 +104,10 @@ button{
 }
 
 @media only screen and (max-width: 600px) {
+    body{
+        background: url("../assets/pattern-background-mobile.svg") no-repeat center/cover;
+        background-color: $Pale-blue;
+    }
     .card{
         margin: 0 1rem ;
     }
@@ -110,6 +116,5 @@ button{
         h1{
             font-size: 1.5rem;
         }
-        p{}
     }
 }
