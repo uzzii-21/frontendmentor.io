@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  background: url("../assets/pattern-background-desktop.svg") no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background-color: #e0e8ff;
+}
+
+.card {
+  border-radius: 1rem;
+  max-width: 449px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.content-section {
+  text-align: center;
+  padding: 3rem;
+}
+
+.content-section h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1f2f56;
+}
+
+.content-section p {
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #7280a7;
+}
+
+.card__plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5f7ff;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+}
+
+.card__plan div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.card__plan div h2 {
+  font-size: 1rem;
+  font-size: 700;
+}
+
+.card__plan div p {
+  margin: 0;
+  font-size: 500;
+}
+
+.card__plan a {
+  font-weight: 700;
+  color: #3829e0;
+}
+
+.card__plan a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.proceed {
+  background: #3829e0;
+  border-radius: 0.7rem;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  -webkit-box-shadow: 0 15px 30px -10px #7280a7;
+          box-shadow: 0 15px 30px -10px #7280a7;
+}
+
+.proceed:hover {
+  opacity: 0.8;
+}
+
+.cancel {
+  margin-top: 2rem;
+  background: #fff;
+  color: #7280a7;
+}
+
+.cancel:hover {
+  color: #1f2f56;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    margin: 0 1rem;
+  }
+  .content-section {
+    padding: 1.5rem;
+  }
+  .content-section h1 {
+    font-size: 1.5rem;
+  }
+}

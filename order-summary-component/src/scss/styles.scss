@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+// Primary
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+
+// Neutral
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+body{
+    font-size: 16px;
+    background: url("../assets/pattern-background-desktop.svg") no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $Pale-blue;
+}
+.card{
+    border-radius: 1rem;
+    max-width: 449px;
+    overflow: hidden;
+    background: #fff;
+}
+.content-section{
+    text-align: center;
+    padding: 3rem;
+    h1{
+        font-size: 2rem;
+        font-weight: 900;
+        color:$Dark-blue;
+    }
+    p{
+        margin: 1.5rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $Desaturated-blue;
+    }
+}
+.card__plan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $Very-pale-blue;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 1rem;
+    div {
+        flex-grow: 1;
+        text-align: left;
+        padding-left: 1rem;
+        h2{
+            font-size: 1rem;
+            font-size: 700;
+        }
+        p{
+            margin: 0;
+            font-size: 500;
+        }
+    }
+    a{
+        font-weight: 700;
+        color: $Bright-blue;
+    }
+    a:hover{
+        opacity: 0.8;
+        text-decoration: none;
+    }
+}
+button{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.proceed{
+    background: $Bright-blue;
+    border-radius: 0.7rem;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 0.8rem;
+    box-shadow: 0 15px 30px -10px #7280a7;
+}
+.proceed:hover{
+    opacity: 0.8;
+}
+.cancel{
+    margin-top: 2rem;
+    background: #fff;
+    color: $Desaturated-blue;
+}
+.cancel:hover{
+    color: $Dark-blue;
+}
+
+@media only screen and (max-width: 600px) {
+    .card{
+        margin: 0 1rem ;
+    }
+    .content-section{
+        padding: 1.5rem;
+        h1{
+            font-size: 1.5rem;
+        }
+        p{}
+    }
+}
