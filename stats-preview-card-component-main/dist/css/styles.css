@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+
+    --heading: hsl(0, 0%, 100%);
+    --paragraph:hsla(0, 0%, 100%, 0.75);
+    --stat-paragraph: hsla(0, 0%, 100%, 0.6);
+
+}
+body{
+    font-size: 15px;
+    background: var(--main-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card{
+    margin: 0 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--card-background);
+    display: flex;
+    width: 70rem;
+}
+
+.card-content{
+    width: 50%;
+    /* flex: 1; */
+    padding: 4rem;
+}
+.card-content > h1{
+    color: var(--heading);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+.card-content > p{
+    width: 90%;
+    font-size: 1rem;
+    color: var(--paragraph);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+.insights{
+    color: var(--accent);
+}
+.stat-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    width: 80%;
+}
+.stat > h2{
+    color: var(--heading);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.stat > p{
+    color: var(--stat-paragraph);
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.card-image{
+    position: relative;
+    width: auto;
+    height: auto;
+    flex: 1;
+}
+.over-laye{
+    position: absolute;
+    background: var(--accent);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+.header-desktop{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+.header-mobile{
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .card{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .card-content{
+        width: 100%;
+    }
+    .header-desktop{
+        display: none;
+        
+    }
+    .card-content{
+        width: 100%;
+        padding: 1.5rem;
+    }
+    .card-content > h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .card-content p{
+        text-align: center;
+        width: 100%;
+    }
+    .header-mobile{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover ;
+    }
+    .stat-container{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .stat{
+        margin-bottom: 1.5rem;
+    }
+}
