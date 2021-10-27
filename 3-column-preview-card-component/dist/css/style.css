@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+
+    --heading: hsl(0, 0%, 95%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+}
+body{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card{
+    width: 18.2rem;
+    padding: 2.5rem;
+}
+main > .card:nth-child(1){
+    background-color: var(--orange);
+}
+main > .card:nth-child(2){
+    background-color: var(--cyan);
+}
+main > .card:nth-child(3){
+    background-color: var(--dark-cyan);
+}
+.card h1{
+    margin: 1.5rem 0;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    color: var(--heading);
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+.card p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--paragraphs);
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+.card button{
+    margin-top: 5rem;
+    border: 2px solid var(--paragraphs);
+    background: var(--heading);
+    outline: none;
+    border-radius: 999px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    padding: 1rem 2rem;
+}
+.card:nth-child(1) > button{
+    color: var(--orange);
+}
+.card:nth-child(2) > button{
+    color: var(--cyan);
+}
+.card:nth-child(3) > button{
+    color: var(--dark-cyan);
+}
+.card button:hover{
+    background: transparent;
+    color: var(--paragraphs);
+}
+img{
+    height: auto;
+    width: auto;
+}
+@media only screen and (max-width: 768px) {
+    body{
+        height: 100%;
+    }
+    main{
+        flex-direction: column;
+        margin: 5rem 1rem;
+    }
+    .card button{
+        margin-top: 2rem;
+    }
+}
