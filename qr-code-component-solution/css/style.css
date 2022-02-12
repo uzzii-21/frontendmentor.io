@@ -35,6 +35,7 @@ h1, p {
 }
 
 h1{
+    font-size: 1.6rem;
     margin: 1.5rem 0.5rem 0 0.5rem;
     color: var(--Dark-blue);
     font-weight: 700;
