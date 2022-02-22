@@ -65,8 +65,13 @@ button{
     border: none;
     cursor: pointer;
 }
-button:active{
+button:hover{
     box-shadow: 0 0 30px var(--neonGreen);
+}
+.rotate-animation{
+    animation: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 button>img{
     color: var(--fontQuote);
