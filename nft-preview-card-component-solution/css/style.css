@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+
+:root{
+    /* Primary */
+
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+
+/* Neutral */
+
+--main-bg: hsl(217, 54%, 11%);
+--card-bg: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+}
+html{
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-bg);
+}
+.card{
+    padding: 1.2rem;
+    border-radius: 1rem;
+    background: var(--card-bg);
+    width: 20rem;
+    box-shadow: 1px 7px 54px 14px #0000002b;
+}
+.preview {
+    border-radius: .8rem;
+    height: 316.8px;
+    overflow: hidden;
+    position: relative;
+}
+.preview > img {
+    height: 100%;
+}
+.preview > div {
+    display: none;
+    background: url('../images/icon-view.svg') no-repeat center;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.preview> img:hover + div, .preview> img + div:hover{
+ cursor: pointer;
+ display: block;
+}
+h1{
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.card > p {
+    color: var(--soft-blue);
+}
+.details{
+    display: flex;
+    align-items: center;
+    margin: 1.2rem 0;
+    justify-content: space-between;
+}
+.details > div {
+    display: flex;
+    align-items: center;
+}
+.details > div > img {
+    margin-right: 6px;
+}
+
+.eth {
+    font-size: .9rem;
+    color: var(--cyan);
+    font-weight: 600;
+}
+.time {
+    font-size: .9rem;
+    color: var(--soft-blue);
+    font-weight: 400;
+}
+.creator{
+    display: flex;
+    align-items: center;
+}
+hr{
+    border: 1px solid var(--line);
+    margin-bottom: 1rem;
+}
+.creator > img{
+    width: 2rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+.creator > p {
+    color: var(--white);
+}
+.creator > p > span{
+    color: var(--soft-blue);
+}
+
+.creator > p:hover, h1:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
